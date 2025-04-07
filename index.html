@@ -13,68 +13,98 @@
       font-family: 'Inter', sans-serif;
     }
     body {
-      background-color: #f8f9fa;
+      background-color: #f4f6f8;
       color: #333;
       line-height: 1.6;
+      padding-top: 5rem;
     }
     header {
       background: #fff;
       padding: 2rem;
       text-align: center;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-bottom: 4px solid #0077cc;
     }
     header h1 {
-      font-size: 2rem;
+      font-size: 2.5rem;
       font-weight: 700;
+      color: #0077cc;
     }
     header p {
+      font-size: 1rem;
       color: #555;
     }
     section {
-      padding: 3rem 1rem;
-      max-width: 800px;
+      padding: 3rem 2rem;
+      max-width: 900px;
       margin: auto;
     }
-    .projects {
+    .projects, .work-experience {
       display: grid;
-      gap: 1.5rem;
+      gap: 2rem;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
-    .project {
+    .project, .work-experience div {
       background: #fff;
+      border-radius: 12px;
       padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    .project img {
+    .project:hover, .work-experience div:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .project img, .profile-pic {
       width: 80%;
-      max-width: 300px;
+      max-width: 220px;
       display: block;
       margin: 0 auto 1rem auto;
       border-radius: 8px;
-      border: 2px solid #ccc;
+      border: 3px solid #0077cc;
     }
-    .project h3 {
-      margin-bottom: 0.5rem;
+    .project h3, .work-experience h3 {
       text-align: center;
+      color: #0077cc;
+      font-size: 1.25rem;
+      margin-bottom: 0.8rem;
+    }
+    .work-experience p, .project p {
+      color: #555;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+    .work-experience p strong {
+      font-weight: bold;
     }
     footer {
       background: #fff;
       text-align: center;
-      padding: 2rem 1rem;
+      padding: 2rem;
       color: #666;
-      border-top: 1px solid #eee;
+      border-top: 1px solid #ddd;
     }
     a {
       color: #0077cc;
       text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #005fa3;
     }
     .profile-pic {
       width: 120px;
+      height: 120px;
       border-radius: 50%;
-      margin: 1rem auto;
-      display: block;
-      border: 2px solid #ccc;
+      border: 4px solid #0077cc;
+    }
+    @media screen and (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      section {
+        padding: 2rem 1rem;
+      }
     }
   </style>
 </head>
@@ -90,6 +120,22 @@
     <p>
       Hi! I'm Farah, a first year student at <a href="https://www.yorku.ca/">York University</a> in Toronto, where I am studying for my Bachelor's in Business and Economics. I am passionate about learning and exploring new opportunities. I'm building this portfolio to showcase my growth, interests, and creative work as I progress in my academic and professional journey.
     </p>
+  </section>
+	  
+  <section>
+    <h2>Work Experience</h2>
+    <div class="work-experience">
+      <div>
+        <h3>Intern at XYZ Company</h3>
+        <p><strong>January 2024 - Present</strong></p>
+        <p>Assisted in the development and design of digital marketing materials for XYZ Company, while learning about the latest trends in web design and user experience.</p>
+      </div>
+      <div>
+        <h3>Freelance Web Developer</h3>
+        <p><strong>May 2023 - December 2023</strong></p>
+        <p>Worked with various clients to design and develop websites that enhanced their online presence and user engagement. Gained hands-on experience in HTML, CSS, and JavaScript.</p>
+      </div>
+    </div>
   </section>
 
   <section>
